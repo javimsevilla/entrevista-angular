@@ -1,5 +1,7 @@
 # Angular v13 — Tour of Heroes
 
+Angular 13 [Tour of Heroes app and tutorial](https://angular.io/tutorial).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
 ## Development server
