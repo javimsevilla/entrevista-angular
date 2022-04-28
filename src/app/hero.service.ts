@@ -19,12 +19,13 @@ export class HeroService {
     private messageService: MessageService) { }
 
   /** GET heroes from the server */
-  getHeroes(): Observable<Hero[]> {
-    return this.http.get<Hero[]>(this.heroesUrl)
-      .pipe(
-        catchError(this.handleError<Hero[]>('getHeroes', []))
-      );
-  }
+getHeroes(): Observable<Hero[]> {
+  return this.http.get<Hero[]>(this.heroesUrl)
+    .pipe(
+      tap(_ => this.log('fetched heroes')),
+      catchError(this.handleError<Hero[]>('getHeroes', []))
+    );
+}
 
   getHero(id: number): Observable<Hero> {
     // For now, assume that a hero with the specified `id` always exists.
