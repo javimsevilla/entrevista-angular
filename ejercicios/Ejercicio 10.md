@@ -1,7 +1,7 @@
-| [‹ Volver al Backlog](./README.md)  |
-| --- |
+| [⁝≡ Índice](./README.md) || [‹ Ejercicio 09](./Ejercicio%2009.md) |
+| --- | --- | --- |
 
-# Historia de usuario 10
+# Ejercicio 10
 
 ## Descripción
 
