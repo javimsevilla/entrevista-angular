@@ -1,29 +1,42 @@
 # Angular v13 — Tour of Heroes
 
-Angular 13 [Tour of Heroes app and tutorial](https://angular.io/tutorial).
+Repositorio auxiliar para entrevista de trabajo para desarrollo con Angular.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+Para la prueba se valorará:
 
-## Development server
+- La metodología de trabajo empleada.
+- Los argumentos aportados para la toma de decisiones.
+- Narración continua de los pasos que se realicen.
+- Buenas prácticas de desarrollo de código.
+- Implementación de tests.
+- Desarrollo guiado por pruebas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# >>> [EMPEZAR LA PRUEBA](./backlog/README.md) <<<
 
-## Code scaffolding
+[App y tutorial Tour de Héroes](https://angular.io/tutorial) con Angular 13.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Este proyecto ha sido generado con [Angular CLI](https://github.com/angular/angular-cli) versión 13.3.3.
 
-## Build
+## Servidor de desarrollo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ejecuta `ng serve` para un entorno de desarrollo. Navega a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambias cualquier fichero fuente.
 
-## Running unit tests
+## Generación de código
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ejecuta `ng generate component component-name` para generar un nuevo componente. También puedes usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Running end-to-end tests
+## Compilación
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Ejecuta `ng build` para compilar el proyecto. Los artefactos compilados se almacenarán en el directorio `dist/`.
 
-## Further help
+## Ejecutar test unitarios
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Ejecuta `ng test` para ejecutar los test unitarios mediante [Karma](https://karma-runner.github.io).
+
+## Ejecutar tests end-to-end
+
+Ejecuta `ng e2e` para ejectar los test end-to-end mediante la plataforma de tu elección. Para usar este comando, primero tienes que añadir un paquete que implemente las capacidades para testing end-to-end.
+
+## Más ayuda
+
+Para obtener más ayuda sobre Angular CLI usa `ng help` o echa un vistazo a la página [Angular CLI Overview and Command Reference](https://angular.io/cli)
