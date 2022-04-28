@@ -16,7 +16,7 @@ export class HeroService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  private heroesUrl = `${environment.apiUrl}/heroes`;  // URL to web api
+  private heroesUrl = 'api/heroes';  // URL to web api
 
   constructor(
     private http: HttpClient,
@@ -73,7 +73,7 @@ export class HeroService {
       // if not search term, return empty hero array.
       return of([]);
     }
-    return this.http.get<Hero[]>(`${this.heroesUrl}/?name_like=${term}`).pipe(
+    return this.http.get<Hero[]>(`${this.heroesUrl}/?name=${term}`).pipe(
       tap(x => x.length ?
         this.log(`found heroes matching "${term}"`) :
         this.log(`no heroes matching "${term}"`)),
