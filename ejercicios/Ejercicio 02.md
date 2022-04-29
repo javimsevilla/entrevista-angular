@@ -13,7 +13,7 @@ Ver en un mismo lugar todos los detalles de un poder determinado.
 
 ## Contexto
 
-El usuario no sabe qué información disponible hay sobre cada poder de súper héroe. Necesita un lugar donde ver todos los detalles de un poder determinado. Los detalles de un poder de súper héroe son:
+El cliente no sabe qué información disponible hay sobre cada poder de súper héroe. Necesita un lugar donde ver todos los detalles de un poder determinado. Los detalles de un poder de súper héroe son:
 
 |||
 | --- | --- |

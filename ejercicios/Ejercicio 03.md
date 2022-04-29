@@ -13,7 +13,7 @@ Junto a los detalles del súper poder, ver una lista de aquellos héroes que tie
 
 ## Contexto
 
-El usuario no sabe qué súper héroes tienen un poder determinado, así que quiere ver todos los súper héroes con el mismo poder en un mismo lugar en la página de detalles del súper poder.
+El cliente no sabe qué súper héroes tienen un poder determinado, así que quiere ver todos los súper héroes con el mismo poder en un mismo lugar en la página de detalles del súper poder.
 
 ## Definición de terminado
 

@@ -13,7 +13,7 @@ Ver en un mismo lugar todos los poderes de súper héroes que existen en la apli
 
 ## Contexto
 
-El usuario no sabe qué poderes de súper héroes existen disponibles en la aplicación, así que quiere ver todos los poderes disponibles en una misma página.
+El cliente no sabe qué poderes de súper héroes existen disponibles en la aplicación, así que quiere ver todos los poderes disponibles en una misma página.
 
 ## Definición de terminado
 

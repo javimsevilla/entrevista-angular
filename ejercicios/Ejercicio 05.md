@@ -9,7 +9,7 @@ Crear un súper poder.
 
 ## Valor
 
-El usuario puede introducir nuevos poderes en la aplicación.
+El cliente puede introducir nuevos poderes en la aplicación.
 
 ## Contexto
 

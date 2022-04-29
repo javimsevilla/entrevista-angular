@@ -13,7 +13,7 @@ Poder cambiar los datos de un súper poder que ya existe en la aplicación.
 
 ## Contexto
 
-Si el usuario desea cambiar los datos de un súper poder en concreto, necesita un formulario mediante el cual editar los detalles de un poder.
+Si el cliente desea cambiar los datos de un súper poder en concreto, necesita un formulario mediante el cual editar los detalles de un poder.
 
 ## Definición de terminado
 
