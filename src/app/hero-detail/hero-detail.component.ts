@@ -6,11 +6,23 @@ import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-hero-detail',
-  templateUrl: './hero-detail.component.html',
-  styleUrls: ['./hero-detail.component.css'],
+  template: `
+    <div *ngIf="hero">
+      <h2>{{ hero.name | uppercase }} Details</h2>
+      <div><span>id: </span>{{ hero.id }}</div>
+      <div>
+        <label for="hero-name">Hero name: </label>
+        <input id="hero-name" [(ngModel)]="hero.name" placeholder="name" />
+      </div>
+    </div>
+
+    <button type="button" (click)="goBack()">go back</button>
+    <button type="button" (click)="save()">save</button>
+  `,
+  styles: [``],
 })
 export class HeroDetailComponent implements OnInit {
-  @Input() hero?: Hero;
+  hero?: Hero;
 
   constructor(
     private route: ActivatedRoute,
