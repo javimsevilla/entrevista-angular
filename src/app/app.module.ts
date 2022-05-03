@@ -5,10 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppRutasModule } from './app-rutas.module';
 import { AppComponent } from './app.component';
-import { PanelComponent } from './panel.component';
-import { HeroeDetallesComponent } from './heroe-detalles.component';
-import { HeroeBusquedaComponent } from './heroe-busqueda.component';
-import { HeroesListaComponent } from './heroes-lista.component';
+import { PanelComponent } from './heroes/panel.component';
+import { HeroeDetallesComponent } from './heroes/heroe-detalles.component';
+import { HeroeBusquedaComponent } from './heroes/heroe-busqueda.component';
+import { HeroesListaComponent } from './heroes/heroes-lista.component';
 import { BackendAPIService } from './backend-api.service';
 
 @NgModule({

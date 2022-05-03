@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PanelComponent } from './panel.component';
-import { HeroeDetallesComponent } from './heroe-detalles.component';
-import { HeroesListaComponent } from './heroes-lista.component';
+import { PanelComponent } from './heroes/panel.component';
+import { HeroeDetallesComponent } from './heroes/heroe-detalles.component';
+import { HeroesListaComponent } from './heroes/heroes-lista.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/panel', pathMatch: 'full' },
