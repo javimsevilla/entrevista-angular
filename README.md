@@ -11,7 +11,3 @@ Repositorio auxiliar para entrevista de trabajo para desarrollo con Angular.
 <span style="font-size:2rem">🤓</span> Que apliques los principios, patrones y prácticas de desarrollo de software que conozcas y puedan aplicarse en cada caso (_SOLID_, _DRY_, _KISS_, _TDD_, etc.).
 
 <span style="font-size:2rem">💃</span> Que te lo pases bien y disfrutes.
-
-<br>
-
-# [>>> EMPEZAR LA PRUEBA <<<](./ejercicios/README.md#ejercicios)
