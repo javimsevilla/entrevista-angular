@@ -1,6 +1,32 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "schematics": {
+    "@schematics/angular:component": {
+      "flat": true,
+      "inlineStyle": true,
+      "inlineTemplate": true,
+      "skipTests": true
+    },
+    "@schematics/angular:directive": {
+      "skipTests": true
+    },
+    "@schematics/angular:pipe": {
+      "flat": true,
+      "skipTests": true
+    },
+    "@schematics/angular:service": {
+      "flat": true,
+      "skipTests": true
+    },
+    "@schematics/angular:class": {
+      "skipTests": true
+    },
+    "@schematics/angular:guard": {
+      "flat": true,
+      "skipTests": true
+    }
+  },
   "newProjectRoot": "projects",
   "projects": {
     "angular13-tour-of-heroes": {
