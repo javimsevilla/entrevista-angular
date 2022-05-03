@@ -1,36 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { Heroe } from './heroe';
+import { HeroeService } from './heroe.service';
 
 @Component({
-  selector: 'app-heroes',
+  selector: 'app-heroes-lista',
   template: `
-    <h2>My Heroes</h2>
+    <h2>Los Héroes</h2>
 
     <div>
-      <label for="new-hero">Hero name: </label>
-      <input id="new-hero" #heroName />
+      <label for="new-hero">Nombre del héroe: </label>
+      <input id="new-hero" #heroeNombre />
 
-      <!-- (click) passes input value to add() and then clears the input -->
       <button
         type="button"
         class="add-button"
-        (click)="add(heroName.value); heroName.value = ''"
+        (click)="anyadir(heroeNombre.value); heroeNombre.value = ''"
       >
-        Add hero
+        Añadir héroe
       </button>
     </div>
 
     <ul class="heroes">
-      <li *ngFor="let hero of heroes">
-        <a routerLink="/detail/{{ hero.id }}">
-          <span class="badge">{{ hero.id }}</span> {{ hero.name }}
+      <li *ngFor="let heroe of heroes">
+        <a routerLink="/heroe-detalles/{{ heroe.id }}">
+          <span class="badge">{{ heroe.id }}</span> {{ heroe.nombre }}
         </a>
         <button
           type="button"
           class="delete"
-          title="delete hero"
-          (click)="delete(hero)"
+          title="borrar héroe"
+          (click)="borrar(heroe)"
         >
           &times;
         </button>
@@ -39,7 +38,6 @@ import { HeroService } from './hero.service';
   `,
   styles: [
     `
-      /* HeroesComponent's private CSS styles */
       .heroes {
         margin: 0 0 2em 0;
         list-style-type: none;
@@ -132,33 +130,31 @@ import { HeroService } from './hero.service';
     `,
   ],
 })
-export class HeroesComponent implements OnInit {
-  heroes: Hero[] = [];
+export class HeroesListaComponent implements OnInit {
+  heroes: Heroe[] = [];
 
   constructor(
-    private heroService: HeroService
+    private heroeServicio: HeroeService
   ) {}
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.obtenerHeroes();
   }
 
-  getHeroes(): void {
-    this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
+  obtenerHeroes(): void {
+    this.heroeServicio.obtenerHeroes().subscribe((heroes) => (this.heroes = heroes));
   }
 
-  add(name: string): void {
-    name = name.trim();
-    if (!name) {
-      return;
-    }
-    this.heroService.addHero({ name } as Hero).subscribe((hero) => {
+  anyadir(nombre: string): void {
+    nombre = nombre.trim();
+    if (!nombre) return;
+    this.heroeServicio.anyadirHeroe({ nombre: nombre } as Heroe).subscribe((hero) => {
       this.heroes.push(hero);
     });
   }
 
-  delete(hero: Hero): void {
+  borrar(hero: Heroe): void {
     this.heroes = this.heroes.filter((h) => h !== hero);
-    this.heroService.deleteHero(hero.id).subscribe();
+    this.heroeServicio.borrarHeroe(hero.id).subscribe();
   }
 }

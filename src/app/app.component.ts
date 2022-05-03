@@ -3,16 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <h1>{{ title }}</h1>
+    <h1>{{ titulo }}</h1>
     <nav>
-      <a routerLink="/dashboard">Dashboard</a>
-      <a routerLink="/heroes">Heroes</a>
+      <a routerLink="/panel">Panel</a>
+      <a routerLink="/heroes">Héroes</a>
     </nav>
     <router-outlet></router-outlet>
   `,
   styles: [
     `
-      /* AppComponent's private CSS styles */
       h1 {
         margin-bottom: 0;
       }
@@ -37,5 +36,5 @@ import { Component } from '@angular/core';
   ],
 })
 export class AppComponent {
-  title = 'Tour of Heroes';
+  titulo = 'Tour de Héroes';
 }

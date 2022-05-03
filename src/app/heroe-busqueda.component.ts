@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { Heroe } from './heroe';
+import { HeroeService } from './heroe.service';
 
 @Component({
-  selector: 'app-hero-search',
+  selector: 'app-heroe-busqueda',
   template: `
     <div id="search-component">
-      <label for="search-box">Hero Search</label>
-      <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+      <label for="search-box">Buscar un héroe</label>
+      <input #cajaBusqueda id="search-box" (input)="buscar(cajaBusqueda.value)" />
 
       <ul class="search-result">
-        <li *ngFor="let hero of heroes$ | async">
-          <a routerLink="/detail/{{ hero.id }}">
-            {{ hero.name }}
+        <li *ngFor="let heroe of heroes$ | async">
+          <a routerLink="/heroe-detalles/{{ heroe.id }}">
+            {{ heroe.nombre }}
           </a>
         </li>
       </ul>
@@ -22,8 +22,6 @@ import { HeroService } from './hero.service';
   `,
   styles: [
     `
-      /* HeroSearch private styles */
-
       label {
         display: block;
         font-weight: bold;
@@ -71,27 +69,21 @@ import { HeroService } from './hero.service';
     `,
   ],
 })
-export class HeroSearchComponent implements OnInit {
-  heroes$!: Observable<Hero[]>;
-  private searchTerms = new Subject<string>();
+export class HeroeBusquedaComponent implements OnInit {
+  heroes$!: Observable<Heroe[]>;
+  private terminosBusqueda = new Subject<string>();
 
-  constructor(private heroService: HeroService) {}
+  constructor(private heroeServicio: HeroeService) {}
 
-  // Push a search term into the observable stream.
-  search(term: string): void {
-    this.searchTerms.next(term);
+  buscar(terminos: string): void {
+    this.terminosBusqueda.next(terminos);
   }
 
   ngOnInit(): void {
-    this.heroes$ = this.searchTerms.pipe(
-      // wait 300ms after each keystroke before considering the term
+    this.heroes$ = this.terminosBusqueda.pipe(
       debounceTime(300),
-
-      // ignore new term if same as previous term
       distinctUntilChanged(),
-
-      // switch to new search observable each time the term changes
-      switchMap((term: string) => this.heroService.searchHeroes(term))
+      switchMap((terminos: string) => this.heroeServicio.buscarHeroes(terminos))
     );
   }
 }

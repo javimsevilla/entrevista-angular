@@ -1,24 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { Heroe } from './heroe';
+import { HeroeService } from './heroe.service';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'app-panel',
   template: `
-    <h2>Top Heroes</h2>
+    <h2>Top Héroes</h2>
     <div class="heroes-menu">
-      <a *ngFor="let hero of heroes" routerLink="/detail/{{ hero.id }}">
-        {{ hero.name }}
+      <a
+        *ngFor="let heroe of heroes"
+        routerLink="/heroe-detalles/{{ heroe.id }}"
+      >
+        {{ heroe.nombre }}
       </a>
     </div>
 
-    <app-hero-search></app-hero-search>
+    <app-heroe-busqueda></app-heroe-busqueda>
   `,
   styles: [
     `
-      /* DashboardComponent's private CSS styles */
-
-      h2 { text-align: center }
+      h2 {
+        text-align: center;
+      }
 
       .heroes-menu {
         padding: 0;
@@ -26,6 +29,10 @@ import { HeroService } from './hero.service';
         max-width: 1000px;
 
         /* flexbox */
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -55,25 +62,30 @@ import { HeroService } from './hero.service';
       }
 
       @media (min-width: 600px) {
-        a { width: 18%; box-sizing: content-box }
+        a {
+          width: 18%;
+          box-sizing: content-box;
+        }
       }
 
-      a:hover { background-color: #000 }
+      a:hover {
+        background-color: black;
+      }
     `,
   ],
 })
-export class DashboardComponent implements OnInit {
-  heroes: Hero[] = [];
+export class PanelComponent implements OnInit {
+  heroes: Heroe[] = [];
 
-  constructor(private heroService: HeroService) {}
+  constructor(private heroeServicio: HeroeService) {}
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.obtenerHeroes();
   }
 
-  getHeroes(): void {
-    this.heroService
-      .getHeroes()
+  obtenerHeroes(): void {
+    this.heroeServicio
+      .obtenerHeroes()
       .subscribe((heroes) => (this.heroes = heroes.slice(1, 5)));
   }
 }
